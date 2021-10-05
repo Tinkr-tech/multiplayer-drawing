@@ -12,8 +12,11 @@ canvas.onclick = function (event) {
     drawCircle(event.offsetX, event.offsetY, 'black')
 }
 
+const databaseURL = "https://tinkr.tech/sdb/drawing-game2"
 async function drawServerData() {
     console.log('This runs every second')
+    const serverData = await fetchGET(databaseURL)
+    console.log("Server data fetched:", serverData.length, serverData[0])
 }
 
 setInterval(drawServerData, 1000)
