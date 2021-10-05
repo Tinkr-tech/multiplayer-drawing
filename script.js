@@ -9,7 +9,8 @@ function drawCircle(x, y, color) {
 }
 
 canvas.onclick = function (event) {
-    drawCircle(event.offsetX, event.offsetY, 'black')
+    const sendData = { x: event.offsetX, y: event.offsetY, color: 'black' }
+    fetchPOST(databaseURL, sendData)
 }
 
 const databaseURL = "https://tinkr.tech/sdb/drawing-game"
