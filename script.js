@@ -11,3 +11,9 @@ function drawCircle(x, y, color) {
 canvas.onclick = function (event) {
     drawCircle(event.offsetX, event.offsetY, 'black')
 }
+
+async function drawServerData() {
+    console.log('This runs every second')
+}
+
+setInterval(drawServerData, 1000)
