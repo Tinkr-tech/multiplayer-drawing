@@ -13,4 +13,5 @@ drawCircle(150, 100, 'blue')
 
 canvas.onclick = function (event) {
     console.log("Mouse was clicked:", event.offsetX, event.offsetY)
+    drawCircle(event.offsetX, event.offsetY, 'black')
 }
